@@ -1,6 +1,7 @@
 import express, { Express } from "express";
 import mongoose from "mongoose";
 import cors from "cors";
+import morgan from "morgan";
 
 import { router as productsRouter } from "./routes/products";
 
@@ -11,6 +12,9 @@ const port = 3000;
 // Cors middleware
 // TODO: change to only allowed domains
 app.use(cors());
+
+// logger
+app.use(morgan("dev"));
 
 // Set up mongoDB connection
 mongoose.set("strictQuery", false);
