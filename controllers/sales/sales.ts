@@ -20,7 +20,7 @@ export const createSale = async (req: Request, res: Response) => {
 
     // return status code for now
     // to improve this can return for example created instance with selected information to display to user as a payment confirmation
-    res.status(500);
+    res.sendStatus(200);
 
     // res.json(clientCreated);
   } catch (e) {
