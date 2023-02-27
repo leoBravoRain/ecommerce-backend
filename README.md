@@ -19,6 +19,8 @@ This is part of a full-stack project, so this backend app is connected to a fron
 
 As this is an API, it can be consulted by any client (like POSTMAN, curl, etc). But it makes sense to connect with its frontend app.
 
+> [Frontend project](https://github.com/leoBravoRain/ecommerce-frontend)
+
 ## Requisites 🔌
 
 - **Node Versión**: v18.14.0
