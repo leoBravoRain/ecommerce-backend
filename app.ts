@@ -2,10 +2,14 @@ import express, { Express } from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import morgan from "morgan";
+import dotenv from "dotenv";
 
 import { router as productsRouter } from "./routes/products/products";
 import { router as salesRouter } from "./routes/sales/sales";
 import { baseRoutes } from "./config/baseRoutes";
+
+// env variables
+dotenv.config();
 
 // app setup
 const app: Express = express();
@@ -24,9 +28,11 @@ app.use(morgan("dev"));
 
 // Set up mongoDB connection
 mongoose.set("strictQuery", false);
-// local database
-// TODO: add as env variable
-const mongoDB = "mongodb://localhost/ecommerce-db";
+
+// mongoDB database
+const mongoDB = process.env.MONGO_DB || "";
+
+// connect mongoDB
 main().catch((err) => console.log(err));
 async function main() {
   await mongoose.connect(mongoDB);
