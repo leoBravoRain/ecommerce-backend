@@ -21,6 +21,12 @@ As this is an API, it can be consulted by any client (like POSTMAN, curl, etc). 
 
 > [Frontend project](https://github.com/leoBravoRain/ecommerce-frontend)
 
+## Backend clarification
+
+I developed the same backend with other technology, Nest Js. I developed this project just to use Express.
+
+> [Backend project with Nest Js](https://github.com/leoBravoRain/ecommerce-backend-nest-js)
+
 ## Requisites 🔌
 
 - **Node Versión**: v18.14.0
